@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Welcome to... BUDGETSmart</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h5 text-center *ngIf="items.length === 0">
+    EMPTY BUDGET! 
+    <p> Click button to add Expenses</p>
+  </h5> 
+
+  
+  <ion-list>
+    BUDGET LIST
+    <ion-item-sliding *ngFor="let item of items; let i = index" #slidingItem>
+      <ion-item>
+        
+        <h2>{{item.name}}</h2>
+        <h3>Cost: {{item.quantity}}</h3>
+        
+      </ion-item>
+      <ion-item-options>
+        <button (click)="editItem(item, i)" ion-button color="primary" icon-start>
+          <ion-icon name="create"></ion-icon>
+          Edit
+        </button>
+        
+        <button (click)="shareItem(item, i)" ion-button color="light" icon-start>
+          <ion-icon name="share-alt"></ion-icon>
+          Share
+        </button>
+
+        <button (click)="removeItem(item, item._id)" ion-button color="dark" icon-start>
+          <ion-icon name="trash"></ion-icon>
+          Delete
+        </button>
+       
+      </ion-item-options>
+    </ion-item-sliding>
+
+  
+  </ion-list>
+  <ion-fab bottom right>
+      <button (click)="addItem()" ion-fab mini><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

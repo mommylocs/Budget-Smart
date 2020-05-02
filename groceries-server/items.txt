@@ -1,0 +1,23 @@
+  items = [
+    {
+      name: "Toilet Paper",
+      quantity: "100",
+      blurb: "You don't want to run out of this.",
+      image: "assets/imgs/tp.jpg"
+
+    },
+    {
+      name: "Water Bottles",
+      quantity: "200",
+      blurb: "Great on a hot day.",
+      image: "assets/imgs/bottle.jpg"
+
+    },
+    {
+      name: "Tylenol",
+      quantity: "10",
+      blurb: "Keeps the fever down.",
+      image: "assets/imgs/medicine.jpg"
+
+    }
+  ]
